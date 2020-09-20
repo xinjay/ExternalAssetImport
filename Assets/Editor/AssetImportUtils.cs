@@ -19,6 +19,14 @@ public static class AssetImportUtils
             isStartAssetEditing = false;
         }
     }
+    public static void ForceRefresh(ImportAssetOptions options)
+    {
+        if (isStartAssetEditing)
+            AssetDatabase.StopAssetEditing();
+        AssetDatabase.Refresh(options);
+        if (isStartAssetEditing)
+            AssetDatabase.StartAssetEditing();
+    }
     public static string GetRandomNameByTimeStamp()
     {
         var timeSpan = DateTime.UtcNow - new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);

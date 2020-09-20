@@ -64,10 +64,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Editor\AssetImportUtils.cs" />
+    <Compile Include="Assets\Editor\Assets\Editor\ExcelTest.cs" />
+    <Compile Include="Assets\Editor\Assets\Editor\GameTools.cs" />
+    <Compile Include="Assets\Editor\Assets\Editor\Transformxporter\TransformExporter.cs" />
     <Compile Include="Assets\Editor\ExternalAssetImporter.cs" />
     <Compile Include="Assets\Editor\IExternalAssetImportSetting.cs" />
-    <Compile Include="Assets\Editor\Test.cs" />
+    <Compile Include="Assets\Editor\MetaBase.cs" />
+    <Compile Include="Assets\Editor\MetaSub.cs" />
     <Compile Include="Assets\Editor\Test2.cs" />
+    <Compile Include="Assets\Editor\TestBDFS.cs" />
     <Compile Include="Assets\Editor\TextureImportSetting.cs" />
     <Reference Include="UnityEditor.TestRunner">
       <HintPath>F:/Unity/Unity3DGameProgram/ExternalAssetImport/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
@@ -288,11 +293,17 @@
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
       <HintPath>C:/Program Files/Unity/Unity2019.3.1f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.WebGL.Extensions">
+      <HintPath>C:/Program Files/Unity/Unity2019.3.1f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.Android.Extensions">
       <HintPath>C:/Program Files/Unity/Unity2019.3.1f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/16.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus">
+      <HintPath>F:/Unity/Unity3DGameProgram/ExternalAssetImport/Assets/Editor/Assets/Editor/Transformxporter/Plugins/EPPlus.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>F:/Unity/Unity3DGameProgram/ExternalAssetImport/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
@@ -651,6 +662,12 @@
     <Reference Include="Boo.Lang">
       <HintPath>C:/Program Files/Unity/Unity2019.3.1f1/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp.csproj">
+      <Project>{9A894113-C724-0B3A-11DA-C71AD0D21D90}</Project>
+      <Name>Assembly-CSharp</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
